@@ -1,0 +1,11 @@
+[Unit]
+Description=Gralloc mount bind
+Requires=lxc@android.service
+After=phosh.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'mount -o bind /dev/null /vendor/lib64/hw/gralloc.default.>
+
+[Install]
+WantedBy=multi-user.target
