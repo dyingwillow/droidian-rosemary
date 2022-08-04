@@ -1,0 +1,12 @@
+[Unit]
+Description=Fix power button not working
+Requires=lxc@android.service
+After=phosh.service
+
+[Service]
+ExecStart=/bin/sh -c 'echo 2047 > /sys/class/leds/lcd-backlight/brightness'
+RuntimeMaxSec=1s
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
