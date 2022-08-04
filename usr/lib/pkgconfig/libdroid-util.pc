@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+libexecdir=${exec_prefix}/libexec
+
+Name: libdroid-util
+Description: Common droid module building interface.
+Version: 
+Libs: -L${prefix}/lib/pulse-14.2/modules -ldroid-util
+Cflags: -D_REENTRANT -I${includedir}/pulsecore/modules
