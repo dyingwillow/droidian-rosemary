@@ -1,0 +1,11 @@
+[Unit]
+Description=Audio policy mount
+Requires=lxc@android.service
+After=phosh.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'mount -o bind /usr/lib/droid-vendor-overlay/etc/audio_pol>
+
+[Install]
+WantedBy=multi-user.target
