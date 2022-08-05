@@ -1,0 +1,11 @@
+[Unit]
+Description=Enable wifi on boot
+Requires=lxc@android.service
+After=phosh.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'echo 1 > /dev/wmtWifi'
+
+[Install]
+WantedBy=multi-user.target
