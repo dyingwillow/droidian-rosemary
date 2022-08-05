@@ -1,13 +1,18 @@
 #!/bin/sh
 cp etc/udev/rules.d/70-rosemary.rules /etc/udev/rules.d/70-rosemary.rules
-mkdir -p /etc/ofono/ril_subscriptipn.d/
+mkdir -p /etc/ofono/ril_subscription.d/
 cp etc/ofono/ril_subscription.d/mtk.conf /etc/ofono/ril_subscription.d/mtk.conf
 cp etc/ofono/main.conf /etc/ofono/main.conf
+mkdir -p /etc/phosh/
 cp etc/phosh/phoc.ini /etc/phosh/phoc.ini
 cp etc/modules-load.d/performance.conf /etc/modules-load.d/performance.conf
 cp etc/modules-load.d/connectivity.conf /etc/modules-load.d/connectivity.conf
 cp etc/pulse/default.pa /etc/pulse/default.pa
+mkdir -p /usr/include/pulsecore/
+mkdir -p /usr/include/pulsecore/modules/
+mkdir -p /usr/include/pulsecore/modules/droid/
 cp usr/include/pulsecore/modules/droid/* /usr/include/pulsecore/modules/droid/
+mkdir -p /usr/lib/pkgconfig/
 cp usr/lib/pkgconfig/libdroid-util.c /usr/lib/pkgconfig/libdroid-util.pc
 cp usr/lib/pulse-14.2/modules/* /usr/lib/pulse-14.2/modules/
 cp usr/lib/droid-vendor-overlay/etc/audio_policy_configuration.xml /usr/lib/droid-vendor-overlay/etc/audio_policy_configuration.xml
