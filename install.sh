@@ -18,3 +18,8 @@ cp etc/systemd/system/modules.service /etc/systemd/system/modules.service
 cp etc/systemd/system/gralloc.service /etc/systemd/system/gralloc.service
 cp etc/systemd/system/brightness.service /etc/systemd/system/brightness.service
 cp etc/systemd/system/audiopolicy.service /etc/systemd/system/audiopolicy.service
+systemctl enable ssh-fix
+systemctl enable modules
+systemctl enable gralloc
+systemctl enable brightness
+systemctl enable audiopolicy
